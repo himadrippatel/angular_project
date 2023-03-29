@@ -1,0 +1,30 @@
+<div class="row mb-2">
+  <div class="col-xl-12">
+    <button class="btn btn-success" (click)="newRecipesToggle = !newRecipesToggle">New Recipe</button>
+    <div *ngIf="newRecipesToggle" class="my-2">
+      <div class="form-group">
+        <label for="">Recipe Name</label>
+        <input type="text" [(ngModel)]="recipeName" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Recipe Description</label>
+        <input type="text" [(ngModel)]="recipeDesc" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Recipe Image Path</label>
+        <input type="text" [(ngModel)]="recipeImagePath" class="form-control">
+      </div>
+      <button class="btn btn-success" (click)="newRecipes()">Add Recipe</button>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+
+      <app-recipe-item *ngFor="let recipeItem of recipes" [recipe]="recipeItem"></app-recipe-item>
+
+    </div>
+  </div>
+
+</div>

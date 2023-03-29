@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xl-8">
+    <!-- <form> -->
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="Name">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="">Amount</label>
+          <input type="number" name="amount" class="form-control" placeholder="Amount" [(ngModel)]="Amount">
+        </div>
+      </div>
+    </div>
+    <div class="button-group">
+      <button class="btn btn-success" (click)="addinlistfunc()">Add</button>
+      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-info">Clear</button>
+    </div>
+    <!-- </form> -->
+  </div>
+</div>

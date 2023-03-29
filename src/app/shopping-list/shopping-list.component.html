@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="my-2">
+        <!-- <app-shopping-edit (addinlist)="addinlistfunc($event)"></app-shopping-edit> -->
+        <app-shopping-edit></app-shopping-edit>
+      </div>
+      <div class="my-2">
+        <div class="card my-1" *ngFor="let ingrediantItem of ingrediants">
+          <p class="p-1 mb-1 " [class.text-primary]="ingrediantItem.name === 'Potato'"
+            [class.text-success]="ingrediantItem.name === 'Tomato'">{{ingrediantItem.name}}
+            (<span>{{ingrediantItem.amount}}</span>)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
